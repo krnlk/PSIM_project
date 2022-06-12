@@ -1,0 +1,47 @@
+<%= form_with(model: malfunction) do |form| %>
+  <% if malfunction.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(malfunction.errors.count, "error") %> prohibited this malfunction from being saved:</h2>
+
+      <ul>
+        <% malfunction.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :malfunction_id, style: "display: block" %>
+    <%= form.number_field :malfunction_id %>
+  </div>
+
+  <div>
+    <%= form.label :track_id, style: "display: block" %>
+    <%= form.number_field :track_id %>
+  </div>
+
+  <div>
+    <%= form.label :date, style: "display: block" %>
+    <%= form.date_field :date %>
+  </div>
+
+  <div>
+    <%= form.label :time_from, style: "display: block" %>
+    <%= form.time_field :time_from %>
+  </div>
+
+  <div>
+    <%= form.label :time_to, style: "display: block" %>
+    <%= form.time_field :time_to %>
+  </div>
+
+  <div>
+    <%= form.label :comment, style: "display: block" %>
+    <%= form.text_field :comment %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

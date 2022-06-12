@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @malfunction %>
+
+<div>
+  <%= link_to "Edit this malfunction", edit_malfunction_path(@malfunction) %> |
+  <%= link_to "Back to malfunctions", malfunctions_path %>
+
+  <%= button_to "Destroy this malfunction", @malfunction, method: :delete %>
+</div>

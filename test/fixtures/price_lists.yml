@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price_id: 1
+  price: 1
+  item_type: MyString
+  weekday: MyString
+  time_from: 2022-06-06 17:23:24
+  time_to: 2022-06-06 17:23:24
+  current: false
+
+two:
+  price_id: 1
+  price: 1
+  item_type: MyString
+  weekday: MyString
+  time_from: 2022-06-06 17:23:24
+  time_to: 2022-06-06 17:23:24
+  current: false

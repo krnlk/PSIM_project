@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PsiimProjekt</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+    <ul>
+  <li><%= link_to "Main page", root_path %></li>
+  <li><%= link_to "Price lists", price_lists_path %></li>
+  <li><%= link_to "Tracks", tracks_path %></li>
+  <li><%= link_to "Shoes", shoes_path %></li>
+  <li><%= link_to "Reservations", reservations_path %></li>
+  <!--stuff below should only be visible to employees-->
+  <li><%= link_to "User data", user_data_path %></li>
+  <li><%= link_to "Clients", clients_path %></li>
+  <li><%= link_to "Employees", employees_path %></li>
+  <li><%= link_to "Malfunctions", malfunctions_path %></li>
+  <% if logged_in? %>
+    <li><%= link_to current_user_datum.first_name, current_user_datum %></li>
+    <li><%= link_to "Log Out", logout_path, method: :delete %></li>
+  <% else %>
+    <li><%= link_to "Log In", login_path %></li>
+  <% end %>
+</ul>
+  </head>
+
+  <body>
+   <% if logged_in? %>
+    Logged in as <%= current_user_datum.first_name %>
+    <%= link_to "Profile", current_user_datum %>
+    <%= link_to "Log out", logout_path, method: :delete %>
+  <% else %>
+    <%= link_to "Log In", login_path %>
+  <% end %>
+  <%= yield %>
+  </body>
+</html>

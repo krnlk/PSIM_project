@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Price lists</h1>
+
+<div id="price_lists">
+  <% @price_lists.each do |price_list| %>
+    <%= render price_list %>
+    <p>
+      <%= link_to "Show this price list", price_list %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New price list", new_price_list_path %>

@@ -1,0 +1,1 @@
+json.klucz 'wartosc'

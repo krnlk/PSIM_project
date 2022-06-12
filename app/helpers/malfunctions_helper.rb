@@ -1,0 +1,2 @@
+module MalfunctionsHelper
+end

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Malfunctions</h1>
+
+<div id="malfunctions">
+  <% @malfunctions.each do |malfunction| %>
+    <%= render malfunction %>
+    <p>
+      <%= link_to "Show this malfunction", malfunction %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New malfunction", new_malfunction_path %>
