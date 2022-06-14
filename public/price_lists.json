@@ -1,0 +1,218 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "price_lists",
+  "apis": [
+    {
+      "path": "/price_lists",
+      "operations": [
+        {
+          "summary": "Returns all price lists",
+          "nickname": "PriceLists#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/price_lists",
+      "operations": [
+        {
+          "summary": "Creates a price list",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "id",
+              "type": "integer",
+              "description": "Price_list_id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "price",
+              "type": "integer",
+              "description": "Price",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "item_type",
+              "type": "integer",
+              "description": "Item_type",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "weekday",
+              "type": "integer",
+              "description": "Weekday",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "time_from",
+              "type": "time",
+              "description": "Time_from",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "time_to",
+              "type": "time",
+              "description": "Time_to",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "current",
+              "type": "boolean",
+              "description": "Current",
+              "required": true
+            }
+          ],
+          "notes": "Must be logged in.",
+          "nickname": "PriceLists#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/price_lists/new",
+      "operations": [
+        {
+          "summary": "Returns a view for adding a price list",
+          "nickname": "PriceLists#new",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/price_lists/{id}/edit",
+      "operations": [
+        {
+          "summary": "Returns a view for editing a price list",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Price_list_id",
+              "required": true
+            }
+          ],
+          "nickname": "PriceLists#edit",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/price_lists/{id}",
+      "operations": [
+        {
+          "summary": "Returns a single price list",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Price_list_id",
+              "required": true
+            }
+          ],
+          "nickname": "PriceLists#show",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/price_lists/{id}",
+      "operations": [
+        {
+          "summary": "Updates a price list",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Price_list_id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "id",
+              "type": "integer",
+              "description": "Price_list_id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "price",
+              "type": "integer",
+              "description": "Price",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "item_type",
+              "type": "integer",
+              "description": "Item_type",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "weekday",
+              "type": "integer",
+              "description": "Weekday",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "time_from",
+              "type": "time",
+              "description": "Time_from",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "time_to",
+              "type": "time",
+              "description": "Time_to",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "current",
+              "type": "boolean",
+              "description": "Current",
+              "required": true
+            }
+          ],
+          "notes": "Must be logged in.",
+          "nickname": "PriceLists#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/price_lists/{id}",
+      "operations": [
+        {
+          "summary": "Destroys a price list",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Price_list_id",
+              "required": true
+            }
+          ],
+          "notes": "Must be logged in.",
+          "nickname": "PriceLists#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

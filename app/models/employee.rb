@@ -1,7 +1,7 @@
 class Employee < ApplicationRecord
-    #def change
-        #has_one :user_datum
-        belongs_to :user_datum
-        
-    #end
+    #setting up associations
+    belongs_to :user_datum
+    
+    #which attributes need to be unique
+    validates :id, uniqueness: true
 end

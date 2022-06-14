@@ -1,7 +1,8 @@
 class CreateReservations < ActiveRecord::Migration[7.0]
   def change
     create_table :reservations do |t|
-      t.integer :reservation_id
+      #t.integer :reservation_id
+      #instead of the above, there's a built-in default t_integer: id
       t.date :date
       t.time :time_from
       t.time :time_to

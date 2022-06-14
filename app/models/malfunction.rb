@@ -1,9 +1,11 @@
 class Malfunction < ApplicationRecord
-    #def change
-        belongs_to :track
+    #setting up associations
+    belongs_to :track
 
-        validates :date, presence:true
-        validates :time_from, presence:true
-        validates :time_to, presence:true
-    #end
+    #which attributes need to be unique
+    validates :id, uniqueness: true
+    validates :date, presence:true
+    validates :time_from, presence:true
+    #time_from should be an earlier date in the day than time_to
+    validates :time_to, presence:true, comparison: { greater_than: :time_from }
 end

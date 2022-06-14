@@ -1,8 +1,8 @@
 class Shoe < ApplicationRecord
-    #def change
-    #potentially incorrect relation type
-        has_many :reservations
+    #setting up associations
+    has_many :reservations
 
-        validates :size, presence:true
-    #end
+    #which attributes need to filled out during creation, which ones need to be unique
+    validates :id, uniqueness: true
+    validates :size, presence:true
 end

@@ -1,0 +1,148 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "tracks",
+  "apis": [
+    {
+      "path": "/tracks",
+      "operations": [
+        {
+          "summary": "Returns all tracks",
+          "nickname": "Tracks#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/tracks",
+      "operations": [
+        {
+          "summary": "Creates a track",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "id",
+              "type": "integer",
+              "description": "Track_id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "error",
+              "type": "boolean",
+              "description": "Error",
+              "required": true
+            }
+          ],
+          "notes": "Must be logged in.",
+          "nickname": "Tracks#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/tracks/new",
+      "operations": [
+        {
+          "summary": "Returns new track's view",
+          "nickname": "Tracks#new",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/tracks/{id}/edit",
+      "operations": [
+        {
+          "summary": "Returns the view of editing a track",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Track_id",
+              "required": true
+            }
+          ],
+          "nickname": "Tracks#edit",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/tracks/{id}",
+      "operations": [
+        {
+          "summary": "Returns a single track",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Track_id",
+              "required": true
+            }
+          ],
+          "nickname": "Tracks#show",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/tracks/{id}",
+      "operations": [
+        {
+          "summary": "Updates a track",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Track_id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "id",
+              "type": "integer",
+              "description": "Track_id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "error",
+              "type": "boolean",
+              "description": "Error",
+              "required": true
+            }
+          ],
+          "notes": "Must be logged in.",
+          "nickname": "Tracks#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/tracks/{id}",
+      "operations": [
+        {
+          "summary": "Deletes a track",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Track_id",
+              "required": true
+            }
+          ],
+          "notes": "Must be logged in.",
+          "nickname": "Tracks#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

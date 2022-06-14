@@ -1,6 +1,8 @@
 class Track < ApplicationRecord
-    #def change
-        has_many :malfunctions
-        has_many :reservations
-    #end
+    #setting up associations
+    has_many :malfunctions
+    has_many :reservations
+
+    #which attributes should be unique
+    validates :id, uniqueness: true
 end

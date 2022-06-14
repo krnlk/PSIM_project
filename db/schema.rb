@@ -12,21 +12,18 @@
 
 ActiveRecord::Schema[7.0].define(version: 2022_06_11_165408) do
   create_table "clients", force: :cascade do |t|
-    t.integer "client_id"
     t.integer "user_datum_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "employees", force: :cascade do |t|
-    t.integer "employee_id"
     t.integer "user_datum_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "malfunctions", force: :cascade do |t|
-    t.integer "malfunction_id"
     t.integer "track_id"
     t.date "date"
     t.time "time_from"
@@ -37,10 +34,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_11_165408) do
   end
 
   create_table "price_lists", force: :cascade do |t|
-    t.integer "price_list_id"
     t.integer "price"
-    t.string "item_type"
-    t.string "weekday"
+    t.integer "item_type"
+    t.integer "weekday"
     t.time "time_from"
     t.time "time_to"
     t.boolean "current"
@@ -49,7 +45,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_11_165408) do
   end
 
   create_table "reservations", force: :cascade do |t|
-    t.integer "reservation_id"
     t.date "date"
     t.time "time_from"
     t.time "time_to"
@@ -62,21 +57,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_11_165408) do
   end
 
   create_table "shoes", force: :cascade do |t|
-    t.integer "shoe_id"
     t.integer "size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "tracks", force: :cascade do |t|
-    t.integer "track_id"
     t.boolean "error"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "user_data", force: :cascade do |t|
-    t.integer "user_datum_id"
     t.string "first_name"
     t.string "last_name"
     t.string "login"

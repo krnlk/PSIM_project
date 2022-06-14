@@ -1,0 +1,148 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "shoes",
+  "apis": [
+    {
+      "path": "/shoes",
+      "operations": [
+        {
+          "summary": "Returns all shoes",
+          "nickname": "Shoes#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/shoes",
+      "operations": [
+        {
+          "summary": "Creates a pair of shoes",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "id",
+              "type": "integer",
+              "description": "Shoe_id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "size",
+              "type": "integer",
+              "description": "Size",
+              "required": true
+            }
+          ],
+          "notes": "Must be logged in.",
+          "nickname": "Shoes#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/shoes/new",
+      "operations": [
+        {
+          "summary": "Returns a view of a new pair of shoes",
+          "nickname": "Shoes#new",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/shoes/{id}/edit",
+      "operations": [
+        {
+          "summary": "Returns a view of editing a pair of shoes",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Shoe_id",
+              "required": true
+            }
+          ],
+          "nickname": "Shoes#edit",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/shoes/{id}",
+      "operations": [
+        {
+          "summary": "Returns a single pair of shoes",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Shoe_id",
+              "required": true
+            }
+          ],
+          "nickname": "Shoes#show",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/shoes/{id}",
+      "operations": [
+        {
+          "summary": "Updates a pair of shoes",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Shoe_id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "id",
+              "type": "integer",
+              "description": "Shoe_id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "size",
+              "type": "integer",
+              "description": "Size",
+              "required": true
+            }
+          ],
+          "notes": "Must be logged in.",
+          "nickname": "Shoes#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/shoes/{id}",
+      "operations": [
+        {
+          "summary": "Destroys a pair of shoes",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Shoe_id",
+              "required": true
+            }
+          ],
+          "notes": "Must be logged in.",
+          "nickname": "Shoes#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

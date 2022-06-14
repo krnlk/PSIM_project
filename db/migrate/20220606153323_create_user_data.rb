@@ -3,7 +3,8 @@ class CreateUserData < ActiveRecord::Migration[7.0]
     #create_table :employees do |t|
 
     create_table :user_data do |t|
-      t.integer :user_datum_id
+      #t.integer :user_datum_id
+      #instead of the above, there's a built-in default t_integer: id
       t.string :first_name
       t.string :last_name
       t.string :login

@@ -1,7 +1,8 @@
 class CreateMalfunctions < ActiveRecord::Migration[7.0]
   def change
     create_table :malfunctions do |t|
-      t.integer :malfunction_id
+      #t.integer :malfunction_id
+      #instead of the above, there's a built-in default t_integer: id
       t.integer :track_id
       t.date :date
       t.time :time_from

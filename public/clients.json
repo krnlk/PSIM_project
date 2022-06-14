@@ -1,0 +1,152 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "clients",
+  "apis": [
+    {
+      "path": "/clients",
+      "operations": [
+        {
+          "summary": "Returns all clients",
+          "notes": "Must be logged in.",
+          "nickname": "Clients#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/clients",
+      "operations": [
+        {
+          "summary": "Creates a client",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "id",
+              "type": "integer",
+              "description": "Client_id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "user_datum_id",
+              "type": "integer",
+              "description": "User_datum_id",
+              "required": true
+            }
+          ],
+          "notes": "Must be logged in.",
+          "nickname": "Clients#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/clients/new",
+      "operations": [
+        {
+          "summary": "Returns a view for adding a new client",
+          "notes": "Must be logged in.",
+          "nickname": "Clients#new",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/clients/{id}/edit",
+      "operations": [
+        {
+          "summary": "Returns a view for editing a client",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Client_id",
+              "required": true
+            }
+          ],
+          "notes": "Must be logged in.",
+          "nickname": "Clients#edit",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/clients/{id}",
+      "operations": [
+        {
+          "summary": "Returns a client",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Client_id",
+              "required": true
+            }
+          ],
+          "notes": "Must be logged in.",
+          "nickname": "Clients#show",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/clients/{id}",
+      "operations": [
+        {
+          "summary": "Updates a client",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Client_id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "id",
+              "type": "integer",
+              "description": "Client_id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "id",
+              "type": "integer",
+              "description": "User_datum_id",
+              "required": true
+            }
+          ],
+          "notes": "Must be logged in.",
+          "nickname": "Clients#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/clients/{id}",
+      "operations": [
+        {
+          "summary": "Deletes a client",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Client_id",
+              "required": true
+            }
+          ],
+          "notes": "Must be logged in.",
+          "nickname": "Clients#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

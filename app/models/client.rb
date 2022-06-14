@@ -1,9 +1,8 @@
 class Client < ApplicationRecord
-    #def change
-        #has_one :user_datum
-        belongs_to :user_datum#, foreign_key: true
-        has_many :reservations
-        
-        #validates :personals_id, presence: true
-    #end
+    #setting up associations
+    belongs_to :user_datum
+    has_many :reservations
+    
+    #which attributes need to be unique
+    validates :id, uniqueness: true
 end

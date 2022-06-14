@@ -1,0 +1,206 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "malfunctions",
+  "apis": [
+    {
+      "path": "/malfunctions",
+      "operations": [
+        {
+          "summary": "Returns all malfunctions",
+          "notes": "Must be logged in.",
+          "nickname": "Malfunctions#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/malfunctions",
+      "operations": [
+        {
+          "summary": "Creates a malfunction",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "id",
+              "type": "integer",
+              "description": "Malfunction_id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "track_id",
+              "type": "integer",
+              "description": "Track_id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "date",
+              "type": "date",
+              "description": "Date",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "time_from",
+              "type": "time",
+              "description": "Time_from",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "time_to",
+              "type": "time",
+              "description": "Time_to",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "comment",
+              "type": "string",
+              "description": null,
+              "required": false
+            }
+          ],
+          "notes": "Must be logged in.",
+          "nickname": "Malfunctions#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/malfunctions/new",
+      "operations": [
+        {
+          "summary": "Returns a view for adding a malfunction",
+          "notes": "Must be logged in.",
+          "nickname": "Malfunctions#new",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/malfunctions/{id}/edit",
+      "operations": [
+        {
+          "summary": "Returns a view for editing a malfunction",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Malfunction_id",
+              "required": true
+            }
+          ],
+          "nickname": "Malfunctions#edit",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/malfunctions/{id}",
+      "operations": [
+        {
+          "summary": "Returns a single malfunction",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Malfunction_id",
+              "required": true
+            }
+          ],
+          "nickname": "Malfunctions#show",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/malfunctions/{id}",
+      "operations": [
+        {
+          "summary": "Updates a malfunction",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Malfunction_id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "id",
+              "type": "integer",
+              "description": "Malfunction_id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "track_id",
+              "type": "integer",
+              "description": "Track_id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "date",
+              "type": "date",
+              "description": "Date",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "time_from",
+              "type": "time",
+              "description": "Time_from",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "time_to",
+              "type": "time",
+              "description": "Time_to",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "comment",
+              "type": "string",
+              "description": null,
+              "required": false
+            }
+          ],
+          "notes": "Must be logged in.",
+          "nickname": "Malfunctions#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/malfunctions/{id}",
+      "operations": [
+        {
+          "summary": "Deletes a malfunction",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Malfunction_id",
+              "required": true
+            }
+          ],
+          "notes": "Must be logged in.",
+          "nickname": "Malfunctions#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}
