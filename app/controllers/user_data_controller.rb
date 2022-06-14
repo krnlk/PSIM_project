@@ -48,7 +48,6 @@ class UserDataController < ApplicationController
     notes 'Must be logged in.'
   end
   def create
-    if(logged_in?)
     @user_datum = UserDatum.new(user_datum_params)
 
     respond_to do |format|
@@ -58,7 +57,6 @@ class UserDataController < ApplicationController
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @user_datum.errors, status: :unprocessable_entity }
-      end
       end
     end
   end
