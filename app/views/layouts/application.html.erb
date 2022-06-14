@@ -17,8 +17,8 @@
   <li><%= link_to "Shoes", shoes_path %></li>
   <li><%= link_to "Reservations", reservations_path %></li>
   <!--stuff below should only be visible to employees-->
-  <% if logged_in? %>
-    <li><%= link_to "User data", user_data_path %></li>
+  <li><%= link_to "User data", user_data_path %></li>
+  <% if logged_in? %> <!--TU-->
     <li><%= link_to "Clients", clients_path %></li>
     <li><%= link_to "Employees", employees_path %></li>
     <li><%= link_to "Malfunctions", malfunctions_path %></li>
